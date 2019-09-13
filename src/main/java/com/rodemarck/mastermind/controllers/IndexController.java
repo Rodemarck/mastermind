@@ -23,10 +23,6 @@ public class IndexController {
     @RequestMapping("/")
     public ModelAndView index(){
         ModelAndView mv = new ModelAndView("index");
-        String var = RequestContextHolder.currentRequestAttributes().getSessionId();
-        RequestContextHolder.getRequestAttributes().setAttribute(var, "sexo", 0);
-        System.out.println("index:"+var);
-        System.out.println(RequestContextHolder.getRequestAttributes().getAttribute(var, 0));
         return mv;
     }
     
