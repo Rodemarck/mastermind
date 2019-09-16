@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Master Mind | sala</title>
+        <link rel="stylesheet" href="css/styles.css"/>
+        <link rel="stylesheet" href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" />
+    </head>
+    <body>
+        <table class="table">
+            <thead>
+                <th>criador</th>
+                <th>data</th>
+                <th>nome</th>
+            </thead>
+            <tbody>
+                <tr th:each="jogo,jogoIndex : ${jogos}" th:attr="data-url=${jogo.id}">
+                        <td><span th:text="${jogo.criador.login}"></span></td>
+                        <td><span th:text="${jogo.dataCricao}"></span></td>
+                        <td><span th:text="${jogo.nome}"></span></td>
+                </tr>
+            </tbody>
+        </table>
+
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript" src="js/salaoScript.js"></script>
+</body>
+</html>

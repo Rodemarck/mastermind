@@ -1,5 +1,5 @@
 
-var position=0;
+var position=10;
 var tab = new Array(11);
 var pedras = new Array(11);
 var escolhas = new Array(4);
@@ -26,42 +26,41 @@ $(function() {
     let classe ;
 
     $('.classe').on('click',function(){
-        if($(this).parent().data('index') == position){
+        if($(this).parent().data('index') === position){
             classe=$(this).attr('class');
             $(this).removeClass(classe).addClass("classe "+vectorCores[(vectorCores.indexOf(getClasse(classe))+1) % 9]);
         }
     });
 
     $('.button').on('click',function(){
-        if($(this).parent().data('index') == position){
+        if($(this).parent().data('index') === position){
             if(verificarEmBranco($(this).parent().data('index'))){
-                verificaEscolhas(position);
-                position--;
+                fazEscolhas();
             }
         }
     });
-    $('.btn').click(function () {
-        fazEscolhas();
-    })
 });
 
 function fazEscolhas() {
-    a = $('#escolhaPadrao');
+    a = getLinha(position);
     for(let x = 0 ; x < 4 ; x++){
         escolhas[x] = getClasse($(a).find('#'+x).attr('class'));        
         //$(a).find('#'+x).removeClass(escolhas[x]).addClass("classe white");
     }
     let dados = {
+        id:TabuleiroId,
+        index:position,
         e1:escolhas[0],
         e2:escolhas[1],
         e3:escolhas[2],
-        e4:escolhas[3],
+        e4:escolhas[3]
     };
-    console.log(escolhas);
+    console.log(dados);
     $.get('/fazEscolha',dados)
             .done(function (){
                 mataButton("botao"+position);
-                position=10;
+                position--;
+                
     })
             .fail(function (){
                 console.log("error no sistema");
@@ -79,10 +78,10 @@ function salvar(el){
     }
 }
 
-function getLinha( lo){
+function getLinha(lo){
     let resp = null;
     $('#linhas').children().each(function(i) {
-        if($(this).data('index') == lo){
+        if($(this).data('index') === lo){
             resp = this;
             return this;
         }
@@ -93,12 +92,12 @@ function getLinha( lo){
 
 function verificarEmBranco(index){
     let cont=0;
-    let a = getLinha(index-1);
+    let a = getLinha(index);
     for(let x = 0 ; x < 4 ; x++){        
-        if($(a).find('#'+x).attr('class') == "classe white")
+        if($(a).find('#'+x).attr('class') === "classe white")
             cont+=1;
     }
-    return cont == 0;
+    return cont === 0;
 }
 
 function getClasse(string){
@@ -108,34 +107,10 @@ function getClasse(string){
     for(let x = 0 ; x < vector.length ; x++){
         if(inicio)
             nomeDaClasse+= vector[x];
-        else if(vector[x] == " ")
+        else if(vector[x] === " ")
             inicio=true;
     }
     return nomeDaClasse;
-}
-
-function verificaEscolhas(index){
-    let pretas=0,brancas=0;
-    let aux1,aux2;
-    let a = getLinha(index-1);
-    for(let x=0;x<4;x++){
-        if(escolhas[x] == getClasse ($(a).find('#'+x).attr('class')))
-            pretas++;
-    }
-    for(let x=0;x<11;x++){
-        aux1=0;
-        aux2=0;
-        for(let y=0;y<4;y++){
-            if(vectorCores[x] == escolhas[y])
-                aux1++;
-            if(vectorCores[x] == getClasse($(a).find('#'+x).attr('class'))  )
-                aux2++;
-        }
-        if(aux2>aux1)
-            aux2=aux1;
-        brancas+=aux2;
-    }
-    brancas-=pretas;
 }
 
 function mataButton(nomeDoButton){

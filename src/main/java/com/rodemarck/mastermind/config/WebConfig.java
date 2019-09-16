@@ -49,18 +49,19 @@ public class WebConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                     .antMatchers(ARTEFATOS)
                         .permitAll()
-                    /*.antMatchers("/cadastroProfessor","/sobre")
-                        .permitAll()*/
+                    .anyRequest()
+                        .authenticated()
                     .and()
                     .formLogin()
-                        .loginPage("/")
+                        .loginPage("/logar")
                             .permitAll()
                     .and()
                     .logout()
-                        .permitAll()
-                    .and()
+                        .logoutUrl("/deslogar")
+                            .permitAll()
+                    /*.and()
                     .csrf()
-                        .disable();
+                        .disable()*/;
     }
 }
 
