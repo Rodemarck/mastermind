@@ -68,24 +68,27 @@ public class IndexController {
                                     Tabuleiro.getVectorCores().indexOf(e3),
                                     Tabuleiro.getVectorCores().indexOf(e4)
         };
+        for(int i:escolhas)
+            System.out.println(i);
         int TabuleiroId = Integer.parseInt(id);
         int in = Integer.parseInt(index) - 1;
         try{
             Tabuleiro t = Repositorio.getInstance().TabuleiroPorId(TabuleiroId);
             if(t.valida()){
-                return new ResponseEntity<>(HttpStatus.ALREADY_REPORTED);
+                return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             }if(t.getIndex()<=0){
                 return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
-            }t.setarMatriz(in, escolhas);
+            }
+            t.setarMatriz(escolhas);
+            try{
+                Repositorio.escreve();
+            }catch(IOException e){}
             if(t.valida()){
                 return new ResponseEntity<>(HttpStatus.ACCEPTED);
             }return new ResponseEntity<>(HttpStatus.OK);
         }catch(IOException e){
             
         }finally{
-            try{
-                Repositorio.escreve();
-            }catch(IOException e){}
         }
         return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
     }

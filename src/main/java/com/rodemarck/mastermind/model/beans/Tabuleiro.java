@@ -31,8 +31,9 @@ public class Tabuleiro implements Serializable{
             }
     }
 
-    public void setarMatriz(int index, int ... vector){
-        System.arraycopy(vector, 0, this.matriz[index], 0, 4);
+    public void setarMatriz(int ... vector){
+        for(int x=0;x<4;x++)
+            this.matriz[index][x] = vector[x];
         verifica(index);
     }
 
@@ -143,11 +144,19 @@ public class Tabuleiro implements Serializable{
 
     public boolean valida(){
         int cont;
+        System.out.println("respostas{\n\t");
+        for(int s:this.jogo.getResposta())
+            System.out.print(s+",");
+        System.out.println("\n}");
         for(int y=0 ; y<10 ; y++) {
             cont = 0;
-            for (int x = 0; x < 4; x++)
-                if(this.pedra[y][x] == this.jogo.getResposta() [x])
+            
+            for (int x = 0; x < 4; x++){
+                System.out.print(this.matriz[y][x]+",");
+                if(this.matriz[y][x] == this.jogo.getResposta()[x])
                     cont++;
+            }
+            System.out.println("");
             if(cont == 4)
                 return true;
         }

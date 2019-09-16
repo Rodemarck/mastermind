@@ -19,10 +19,10 @@
         <div id="linhas">
             <div class="linhas d-table" th:each="ar,arr : ${tabuleiro.matriz}" th:attr="data-index=${arr.index}">
                 <div th:each="i,ii : ${ar}" th:class="'classe '+${tabuleiro.cor(i)}" th:id="${ii.index}"></div>
-                <div class="portaResposta">
-                    <div th:each="i,ii : ${tabuleiro.pedra[arr.index]}" th:class="${tabuleiro.pedra(i)}" th:id="${ii.index}"></div>
+                <div class="portaResposta float-left">
+                    <div th:each="i,ii : ${tabuleiro.pedra[arr.index]}" th:class="${tabuleiro.pedra(i)} + ' float-left'" th:id="${ii.index}"></div>
                 </div>
-                <button th:if="${arr.index >= tabuleiro.index}" class="button" th:id="'botao' + ${arr.index}">verifica</button>
+                <button th:if="${arr.index <= tabuleiro.index}" class="button" th:id="'botao' + ${arr.index}">verifica</button>
             </div>
         </div>
         <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>

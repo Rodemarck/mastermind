@@ -46,8 +46,12 @@ function fazEscolhas() {
                 position--;
                 
     })
-            .fail(function (){
-                console.log("error no sistema");
+            .fail(function (xhr, textStatus, errorThrown){
+                switch(xhr.status){
+                    case 400:
+                        alert("você já terminou esse jogo")
+                }
+                console.log(xhr.status);
     });
     console.log("deveria ter ido...");
 }

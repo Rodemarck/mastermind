@@ -12,9 +12,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
 
 /**
  *
@@ -30,8 +28,7 @@ public class WebConfig extends WebSecurityConfigurerAdapter {
             "/js/**",
             "/components/**",
             "/templates/**",
-            "/resources/**",
-            "/webjar/**"
+            "/resources/**"
     };
 
     @Autowired
@@ -53,14 +50,14 @@ public class WebConfig extends WebSecurityConfigurerAdapter {
                         .authenticated()
                     .and()
                     .formLogin()
-                        .loginPage("/logar")
+                        /*.loginPage("/logar")*/
                             .permitAll()
                     .and()
                     .logout()
                         .logoutUrl("/deslogar")
                             .permitAll()
-                    /*.and()
-                    .csrf()
+                    .and()
+                    /*.csrf()
                         .disable()*/;
     }
 }
