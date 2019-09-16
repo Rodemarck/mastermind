@@ -7,16 +7,14 @@ import java.time.LocalDateTime;
 
 public class Jogo implements Serializable{
     private Usuario criador;
-    private Tabuleiro tabuleiro;
     private LocalDateTime dataCricao;
     private String nome;
     private int[] resposta;
     private int id;
 
-    public Jogo(Usuario criador, Tabuleiro tabuleiro, LocalDateTime dataCricao, String nome,int id, int ... resposta) {
+    public Jogo(Usuario criador, LocalDateTime dataCricao, String nome,int id, int ... resposta) {
         this.id = id;
         this.criador = criador;
-        this.tabuleiro = tabuleiro;
         this.dataCricao = dataCricao;
         this.nome = nome;
         this.resposta = resposta;
@@ -33,14 +31,6 @@ public class Jogo implements Serializable{
 
     public void setCriador(Usuario criador) {
         this.criador = criador;
-    }
-
-    public Tabuleiro getTabuleiro() {
-        return tabuleiro;
-    }
-
-    public void setTabuleiro(Tabuleiro tabuleiro) {
-        this.tabuleiro = tabuleiro;
     }
 
     public LocalDateTime getDataCricao() {

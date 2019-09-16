@@ -1,29 +1,13 @@
 
-var position=10;
 var tab = new Array(11);
 var pedras = new Array(11);
 var escolhas = new Array(4);
-for (var i = 0, max = 4; i < max; i++) {
-    escolhas[i] = "white";
-}
+
 const vectorCores =["white","red","green","blue","yellow","pink","turquoise","brown","purple"];
-function inicialize(){
-    let letras = ['a','b','c','d','e','f','g','h','i','j','k','l','m'];
-    for (let index = 0; index < 11; index++) {
-        tab[index] = new Array(4);
-        pedras[index] = new Array(4);
-    }
-     
-    for (let y = 0; y < 11; y++) {
-        for(let x = 0; x < 4 ; x++){
-            tab[x][y]=letras[y]+x;
-        }
-    }
-}
 
 
 $(function() { 
-    let classe ;
+    let classe;
 
     $('.classe').on('click',function(){
         if($(this).parent().data('index') === position){

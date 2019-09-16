@@ -13,14 +13,17 @@ public class Tabuleiro implements Serializable{
     private int[][] pedra;
     private Usuario usuario;
     private LocalDateTime ultimoJogada;
-    private boolean terminado;
+    private int index;
+    private Jogo jogo;
+    
 
-    public Tabuleiro(Usuario u,int id) {
+    public Tabuleiro(Usuario u, Jogo jogo, int id) {
         this.id = id;
         this.usuario = u;
-        this.terminado = false;
         this.matriz = new int[10][4];
         this.pedra = new int[10][4];
+        this.index = 9;
+        this.jogo = jogo;
         for(int y=0 ; y<10 ; y++)
             for (int x = 0; x < 4; x++){
                 this.matriz[y][x] = 0;
@@ -29,23 +32,52 @@ public class Tabuleiro implements Serializable{
     }
 
     public void setarMatriz(int index, int ... vector){
-        for (int x = 0; x < 4; x++)
-            this.matriz[index][x] = vector[x];
-        verifica(index, vector);
+        System.arraycopy(vector, 0, this.matriz[index], 0, 4);
+        verifica(index);
     }
 
     public static ArrayList<String> getVectorCores() {
         return vectorCores;
     }
-
+    
     public String cor(int i){
         return vectorCores.get(i);
+    }
+    
+    public String pedra(int i){
+        switch(i){
+            case 1:
+                return "Resposta False";
+            case 2:
+                return "Resposta True";
+            default:
+                return "Resposta None";
+        }
     }
     
     public int getId() {
         return id;
     }
 
+    public Jogo getJogo() {
+        return jogo;
+    }
+
+    public void setJogo(Jogo jogo) {
+        this.jogo = jogo;
+    }
+    
+    
+
+    public int getIndex() {
+        return index;
+    }
+
+    public void setIndex(int index) {
+        this.index = index;
+    }
+
+    
     public void setId(int id) {
         this.id = id;
     }
@@ -74,21 +106,12 @@ public class Tabuleiro implements Serializable{
         this.ultimoJogada = ultimoJogada;
     }
 
-    public boolean isTerminado() {
-        return terminado;
-    }
-
-    public void setTerminado(boolean terminado) {
-        this.terminado = terminado;
-    }
-    
-
-    public void verifica(int index, int[] resposta) {
+    public void verifica(int index) {
         int pretas = 0;
         int brancas = 0;
         int aux1,aux2;
         for(int i=0 ; i<4 ; i++)
-            if(matriz[index][i] == resposta[i])
+            if(matriz[index][i] == this.jogo.getResposta()[i])
                 pretas ++;
 
         if(pretas == 4)
@@ -99,7 +122,7 @@ public class Tabuleiro implements Serializable{
             aux1 = 0;
             aux2 = 0;
             for(int i=0; i<4; i++){
-                if(resposta[i] == x)
+                if(this.jogo.getResposta()[i] == x)
                     aux1++;
                 if(matriz[index][i] == x)
                     aux2++;
@@ -115,14 +138,15 @@ public class Tabuleiro implements Serializable{
             this.pedra[index][aux1++] = 2;
         while (aux2++ < brancas)
             this.pedra[index][aux1++] = 1;
+        this.index--;
     }
 
-    public boolean valida(int[] resposta){
+    public boolean valida(){
         int cont;
         for(int y=0 ; y<10 ; y++) {
             cont = 0;
             for (int x = 0; x < 4; x++)
-                if(this.pedra[y][x] == resposta [x])
+                if(this.pedra[y][x] == this.jogo.getResposta() [x])
                     cont++;
             if(cont == 4)
                 return true;

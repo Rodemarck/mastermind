@@ -62,7 +62,7 @@ public class IndexController {
     }
     
     @RequestMapping(value="/fazEscolha", method = RequestMethod.GET)
-    public ResponseEntity<String> fazEscolha(String id, String index, String e1, String e2, String e3, String e4) throws IOException{
+    public ResponseEntity<String> fazEscolha(String id, String index, String e1, String e2, String e3, String e4) {
         int[] escolhas = new int[]{Tabuleiro.getVectorCores().indexOf(e1),
                                     Tabuleiro.getVectorCores().indexOf(e2),
                                     Tabuleiro.getVectorCores().indexOf(e3),
@@ -70,12 +70,24 @@ public class IndexController {
         };
         int TabuleiroId = Integer.parseInt(id);
         int in = Integer.parseInt(index) - 1;
-        
-        Repositorio.getInstance().TabuleiroPorId(TabuleiroId).setarMatriz(in, escolhas);
-        Repositorio.escreve();
-        if(e1.equals("red"))
-            return new ResponseEntity<>(HttpStatus.ACCEPTED);
-        return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
+        try{
+            Tabuleiro t = Repositorio.getInstance().TabuleiroPorId(TabuleiroId);
+            if(t.valida()){
+                return new ResponseEntity<>(HttpStatus.ALREADY_REPORTED);
+            }if(t.getIndex()<=0){
+                return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
+            }t.setarMatriz(in, escolhas);
+            if(t.valida()){
+                return new ResponseEntity<>(HttpStatus.ACCEPTED);
+            }return new ResponseEntity<>(HttpStatus.OK);
+        }catch(IOException e){
+            
+        }finally{
+            try{
+                Repositorio.escreve();
+            }catch(IOException e){}
+        }
+        return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
     }
     
 }

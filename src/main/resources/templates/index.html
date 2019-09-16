@@ -13,12 +13,16 @@
         <script th:inline="javascript">
             /*<![CDATA[*/
             TabuleiroId = /*[[${tabuleiro.id}]]*/ '1';
+            position = /*[[${tabuleiro.index}]]*/ '1';
             /*]]>*/
         </script>
         <div id="linhas">
-            <div class="linhas d-table" th:each="ar,arr : ${tabuleiro.matriz}" th:attr="data-index=${1+arr.index}">
+            <div class="linhas d-table" th:each="ar,arr : ${tabuleiro.matriz}" th:attr="data-index=${arr.index}">
                 <div th:each="i,ii : ${ar}" th:class="'classe '+${tabuleiro.cor(i)}" th:id="${ii.index}"></div>
-                <button class="button" th:id="'botao' + ${1+arr.index}">verifica</button>
+                <div class="portaResposta">
+                    <div th:each="i,ii : ${tabuleiro.pedra[arr.index]}" th:class="${tabuleiro.pedra(i)}" th:id="${ii.index}"></div>
+                </div>
+                <button th:if="${arr.index >= tabuleiro.index}" class="button" th:id="'botao' + ${arr.index}">verifica</button>
             </div>
         </div>
         <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>

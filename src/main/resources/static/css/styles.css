@@ -75,6 +75,9 @@ body {
     background:purple;
 }
 
+.portaResposta{
+    width: 25px;
+}
 .Resposta{
     border-radius:100%;
     width:10px;
