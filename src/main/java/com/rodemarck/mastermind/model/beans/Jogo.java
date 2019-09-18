@@ -11,9 +11,10 @@ public class Jogo implements Serializable{
     private String nome;
     private int[] resposta;
     private int id;
+    private static int IDENTIFICATOR = 1;
 
     public Jogo(Usuario criador, LocalDateTime dataCricao, String nome,int id, int ... resposta) {
-        this.id = id;
+        this.id = IDENTIFICATOR++;
         this.criador = criador;
         this.dataCricao = dataCricao;
         this.nome = nome;

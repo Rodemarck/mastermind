@@ -18,7 +18,7 @@ public class Repositorio implements Serializable {
 
     private final ArrayList<Usuario> usuarios = new ArrayList<>();
     private final ArrayList<Jogo> jogos = new ArrayList<>();
-    private final ArrayList<Tabuleiro> tabuleiros = new ArrayList<>();
+    private final ArrayList<RepositorioTabuleiro> tabuleiros = new ArrayList<>();
 
     private Repositorio() {
     }
@@ -89,7 +89,7 @@ public class Repositorio implements Serializable {
         return jogos;
     }
 
-    public ArrayList<Tabuleiro> getTabuleiros() {
+    public ArrayList<RepositorioTabuleiro> getTabuleiros() {
         return tabuleiros;
     }
 
@@ -102,15 +102,23 @@ public class Repositorio implements Serializable {
         }
         return null;
     }
-    
-    
-    public Tabuleiro TabuleiroPorId(int i) {
-        for (Tabuleiro u : tabuleiros) {
-            if (u.getId() == i) {
-                return u;
-            }
-        }
+
+    public Jogo procuraJogoPorId(int jId){
+        for(Jogo j:jogos)
+            if(j.getId() == jId)
+                return j;
         return null;
     }
     
+
+
+    public Tabuleiro getPartida(String username, int jId) {
+        Jogo j = procuraJogoPorId(jId);
+        for(RepositorioTabuleiro r: tabuleiros)
+            if(r.getUsuario().getLogin().equals(username))
+                return r.getTabuleiro(j,jId);
+        RepositorioTabuleiro t = new RepositorioTabuleiro(procurarPorLogin(username));
+        tabuleiros.add(t);
+        return t.getTabuleiro(j,jId);
+    }
 }
