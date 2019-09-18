@@ -3,6 +3,7 @@ package com.rodemarck.mastermind.model.beans;
 
 import com.rodemarck.mastermind.model.user.Usuario;
 import java.io.Serializable;
+import java.sql.ResultSet;
 import java.time.LocalDateTime;
 
 public class Jogo implements Serializable{
@@ -13,8 +14,11 @@ public class Jogo implements Serializable{
     private int id;
     private static int IDENTIFICATOR = 1;
 
+
+    public Jogo(ResultSet rs){
+    }
     public Jogo(Usuario criador, LocalDateTime dataCricao, String nome,int id, int ... resposta) {
-        this.id = IDENTIFICATOR++;
+        this.id = id;
         this.criador = criador;
         this.dataCricao = dataCricao;
         this.nome = nome;

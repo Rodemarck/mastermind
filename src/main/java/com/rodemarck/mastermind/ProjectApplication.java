@@ -16,10 +16,12 @@ public class ProjectApplication {
                 try{
                     Repositorio.getInstance().getUsuarios().add(new Usuario("rode", "123"));
                     Repositorio.getInstance().getJogos().add(new Jogo(Repositorio.getInstance().getUsuarios().get(0), LocalDateTime.now(), "nome",1, new int[]{1,2,3,4,5}));
-                    Repositorio.getInstance().getTabuleiros().add(new Tabuleiro(Repositorio.getInstance().getUsuarios().get(0),
-                                                                  Repositorio.getInstance().getJogos().get(0),1));
                 }catch (IOException e){System.out.println(e);}
-		SpringApplication.run(ProjectApplication.class, args);
+		//SpringApplication.run(ProjectApplication.class, args);
+        String s = "";
+                for(int x=0;x<40;x++)
+                    s+="0";
+        System.out.println(s);
 	}
         
 

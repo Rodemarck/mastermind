@@ -6,14 +6,24 @@
 package com.rodemarck.mastermind.model.user;
 
 import java.io.Serializable;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  *
  * @author RODEMARCK.MELOJ
  */
 public class Usuario implements Serializable{
+    private int id;
     private String login;
     private String senha;
+
+    public Usuario(ResultSet rs) throws SQLException {
+        this.id = rs.getInt("usuarios.id");
+        this.login = rs.getString("usuarios.login");
+        this.senha = rs.getString("usuarios.senha");
+    }
+
     public String getLogin() {
         return login;
     }
