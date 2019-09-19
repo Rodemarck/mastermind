@@ -13,9 +13,10 @@ public class Jogo implements Serializable{
     private int[] resposta;
     private int id;
     private static int IDENTIFICATOR = 1;
-
+    private String respostaString;
 
     public Jogo(ResultSet rs){
+
     }
     public Jogo(Usuario criador, LocalDateTime dataCricao, String nome,int id, int ... resposta) {
         this.id = id;
@@ -23,6 +24,9 @@ public class Jogo implements Serializable{
         this.dataCricao = dataCricao;
         this.nome = nome;
         this.resposta = resposta;
+        this.respostaString = "";
+        for(int i=0;i<4;i++)
+            this.respostaString+=i;
     }
 
     public int getId() {
@@ -61,5 +65,8 @@ public class Jogo implements Serializable{
     public void setResposta(int[] resposta) {
         this.resposta = resposta;
     }
-    
+
+    public String getRespostaString() {
+        return respostaString;
+    }
 }

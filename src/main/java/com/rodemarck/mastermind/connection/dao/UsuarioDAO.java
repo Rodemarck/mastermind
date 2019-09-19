@@ -10,6 +10,24 @@ import java.sql.SQLException;
 
 public class UsuarioDAO {
 
+    public static void cadastrar(String login, String senha) throws SQLException, ClassNotFoundException {
+        Connection con = null;
+        PreparedStatement stmt = null;
+        try{
+            con = DatabaseConnection.getInstance().getConnection();
+            stmt = con.prepareStatement(
+                    "INSERT INTO usuarios (login,senha) VALUES (?,?)"
+            );
+            stmt.setString(1,login);
+            stmt.setString(2,senha);
+            stmt.executeUpdate();
+        }catch (SQLException | ClassNotFoundException e){
+            throw e;
+        }finally{
+            DatabaseConnection.getInstance().close(con,stmt);
+        }
+    }
+
     public static Usuario getByNome(String nome) throws SQLException, ClassNotFoundException {
         Connection con = null;
         PreparedStatement stmt = null;
@@ -32,7 +50,6 @@ public class UsuarioDAO {
         }
         return u;
     }
-
 
     public static Usuario getById(int id) throws SQLException, ClassNotFoundException {
         Connection con = null;
@@ -57,6 +74,22 @@ public class UsuarioDAO {
         return u;
     }
 
+    public static void deleteById(int id) throws SQLException, ClassNotFoundException {
+        Connection con = null;
+        PreparedStatement stmt = null;
+        try{
+            con = DatabaseConnection.getInstance().getConnection();
+            stmt = con.prepareStatement(
+                    "DELETE FROM usuarios WHERE usuarios.id=?"
+            );
+            stmt.setInt(1,id);
+            stmt.executeUpdate();
+        }catch (SQLException | ClassNotFoundException e){
+            throw e;
+        }finally{
+            DatabaseConnection.getInstance().close(con,stmt);
+        }
+    }
 
 
 }

@@ -67,8 +67,6 @@ public class Tabuleiro implements Serializable{
     public void setJogo(Jogo jogo) {
         this.jogo = jogo;
     }
-    
-    
 
     public int getIndex() {
         return index;
@@ -78,7 +76,6 @@ public class Tabuleiro implements Serializable{
         this.index = index;
     }
 
-    
     public void setId(int id) {
         this.id = id;
     }
@@ -161,5 +158,21 @@ public class Tabuleiro implements Serializable{
                 return true;
         }
         return  false;
+    }
+
+    public String getMatrizString(){
+        StringBuilder s= new StringBuilder();
+        for(int[] y:matriz)
+            for(int x:y)
+                s.append(s);
+        return s.toString();
+    }
+
+    public String getPedraString(){
+        StringBuilder s= new StringBuilder();
+        for(int[] y:pedra)
+            for(int x:y)
+                s.append(s);
+        return s.toString();
     }
 }

@@ -44,5 +44,8 @@ public class Usuario implements Serializable{
         this.login = login;
         this.senha = senha;
     }
-    
+
+    public int getId() {
+        return id;
+    }
 }
