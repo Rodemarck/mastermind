@@ -18,8 +18,7 @@ public class Tabuleiro implements Serializable{
     private Jogo jogo;
     
 
-    public Tabuleiro(Usuario u, Jogo jogo, int id) {
-        this.id = id;
+    public Tabuleiro(Usuario u, Jogo jogo) {
         this.usuario = u;
         this.matriz = new int[10][4];
         this.pedra = new int[10][4];

@@ -1,12 +1,12 @@
 package com.rodemarck.mastermind.controllers;
 
-import com.rodemarck.mastermind.model.Repositorio;
+import com.rodemarck.mastermind.connection.dao.JogoDAO;
 import com.rodemarck.mastermind.model.beans.Jogo;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 @RestController
@@ -15,9 +15,10 @@ public class jogosCriadosController {
     public ModelAndView jogos(){
         ArrayList<Jogo> jogos = null;
         try{
-            jogos = Repositorio.getInstance().getJogos();
-        }catch (IOException e){
-            jogos = new ArrayList<>();
+            jogos = JogoDAO.listar();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
         ModelAndView mv = new ModelAndView("jogosCriados");

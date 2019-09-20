@@ -5,11 +5,11 @@ import java.sql.*;
 public class DatabaseConnection {
     private final static String HOST = "localhost";
     private final static int PORT=3306;
-    private final static String DATABASE = "sap";
+    private final static String DATABASE = "mastermind";
     private final static String DRIVER = "com.mysql.cj.jdbc.Driver";
     private final static String URL = "jdbc:mysql://"+HOST+":"+PORT+"/"+DATABASE+"?useTimezone=true&serverTimezone=UTC";
-    private final static String USER = "root";
-    private final static String PASS = "";
+    private final static String USER = "aluno";
+    private final static String PASS = "alunodeinfo";
 
     private static DatabaseConnection instance;
 

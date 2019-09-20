@@ -9,6 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 
 public class JogoDAO {
 
@@ -73,4 +74,25 @@ public class JogoDAO {
         }
     }
 
+    public static ArrayList<Jogo> listar() throws SQLException, ClassNotFoundException {
+        Connection con = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        ArrayList<Jogo> list = new ArrayList<>();
+        try {
+            con = DatabaseConnection.getInstance().getConnection();
+            stmt = con.prepareStatement(
+                    "SELECT * FROM jogo"
+            );
+            rs = stmt.executeQuery();
+            while (rs.next()) {
+                list.add(new Jogo(rs));
+            }
+        } catch (SQLException | ClassNotFoundException e) {
+            throw e;
+        } finally {
+            DatabaseConnection.getInstance().close(con, rs, stmt);
+        }
+        return list;
+    }
 }

@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="694aa7f0-4cf0-41b2-b023-c1fa332d4e5e" name="Default" comment="">
+    <list default="true" id="bc7526c2-1454-46ad-87d5-5f17afda77fb" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/config/AuthenticationSuccessHandlerImpl.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/ProjectApplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/ProjectApplication.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/config/WebConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/config/WebConfig.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/DatabaseConnection.java" afterPath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/DatabaseConnection.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/dao/JogoDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/dao/JogoDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/dao/TabelaDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/dao/TabuleiroDAO.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/dao/TabuleiroDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/dao/TabuleiroDAO.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/dao/UsuarioDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/dao/UsuarioDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/beans/Jogo.java" afterPath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/beans/Jogo.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/controllers/IndexController.java" afterPath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/controllers/IndexController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/controllers/jogosCriadosController.java" afterPath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/controllers/jogosCriadosController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/Repositorio.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/RepositorioTabuleiro.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/beans/Tabuleiro.java" afterPath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/beans/Tabuleiro.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/user/Usuario.java" afterPath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/user/Usuario.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/user/Detalhes.java" afterPath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/user/Detalhes.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,80 +26,24 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_TABLE_DETAILS" value="true" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <expand />
-    <select />
-  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ProjectApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/ProjectApplication.java">
+    <leaf>
+      <file leaf-file-name="TabuleiroDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/dao/TabuleiroDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="32" column="44" lean-forward="false" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Repositorio.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/Repositorio.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1785">
-              <caret line="121" column="36" lean-forward="false" selection-start-line="121" selection-start-column="36" selection-end-line="121" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Usuario.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/user/Usuario.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="47" column="14" lean-forward="true" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="14" />
+            <state relative-caret-position="551">
+              <caret line="172" column="28" lean-forward="false" selection-start-line="172" selection-start-column="28" selection-end-line="172" selection-end-column="28" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1094#1095#0" expanded="true" />
-                <element signature="e#1119#1120#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Jogo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/beans/Jogo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding>
-                <element signature="e#868#869#0" expanded="true" />
-                <element signature="e#893#894#0" expanded="true" />
-                <element signature="e#929#930#0" expanded="true" />
-                <element signature="e#959#960#0" expanded="true" />
-                <element signature="e#1006#1007#0" expanded="true" />
-                <element signature="e#1044#1045#0" expanded="true" />
-                <element signature="e#1088#1089#0" expanded="true" />
-                <element signature="e#1121#1122#0" expanded="true" />
-                <element signature="e#1180#1181#0" expanded="true" />
-                <element signature="e#1224#1225#0" expanded="true" />
-                <element signature="e#1255#1256#0" expanded="true" />
-                <element signature="e#1282#1283#0" expanded="true" />
-                <element signature="e#1322#1323#0" expanded="true" />
-                <element signature="e#1354#1355#0" expanded="true" />
-                <element signature="e#1388#1389#0" expanded="true" />
-                <element signature="e#1419#1420#0" expanded="true" />
-                <element signature="e#1466#1467#0" expanded="true" />
-                <element signature="e#1506#1507#0" expanded="true" />
-                <element signature="e#1547#1548#0" expanded="true" />
-                <element signature="e#1584#1585#0" expanded="true" />
+                <element signature="method#cadastrar#0;class#TabuleiroDAO#0" expanded="false" />
+                <element signature="method#getById#0;class#TabuleiroDAO#0" expanded="false" />
+                <element signature="method#listar#0;class#TabuleiroDAO#0" expanded="false" />
+                <element signature="method#listarByJogador#0;class#TabuleiroDAO#0" expanded="false" />
+                <element signature="method#listarByJogo#0;class#TabuleiroDAO#0" expanded="false" />
+                <element signature="method#fazerJogada#0;class#TabuleiroDAO#0" expanded="false" />
+                <marker date="1569012373292" expanded="true" signature="5891:5914" ph="SELECT * FRO... tabuleiro" />
+                <marker date="1569012373292" expanded="true" signature="5891:6134" ph="SELECT * FRO... tabuleiro" />
+                <marker date="1569012373292" expanded="true" signature="5891:6189" ph="SELECT * FRO... tabuleiro" />
+                <marker date="1569012373292" expanded="true" signature="5891:6235" ph="SELECT * FRO... tabuleiro" />
               </folding>
             </state>
           </provider>
@@ -101,63 +52,8 @@
       <file leaf-file-name="DatabaseConnection.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/DatabaseConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="39" column="47" lean-forward="false" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UsuarioDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/dao/UsuarioDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="91" column="5" lean-forward="false" selection-start-line="76" selection-start-column="4" selection-end-line="91" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#cadastrar#0;class#UsuarioDAO#0" expanded="false" />
-                <element signature="method#getByNome#0;class#UsuarioDAO#0" expanded="false" />
-                <element signature="method#getById#0;class#UsuarioDAO#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JogoDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/dao/JogoDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="45" column="51" lean-forward="false" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#getById#0;class#JogoDAO#0" expanded="false" />
-                <element signature="method#deleteById#0;class#JogoDAO#0" expanded="false" />
-                <marker date="1568921285546" expanded="true" signature="754:829" ph="SELECT * FRO... usuarios" />
-                <marker date="1568921285546" expanded="true" signature="1477:1550" ph="INSERT INTO jogo... " />
-                <marker date="1568921285546" expanded="true" signature="2297:2329" ph="DELETE FROM jogo... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TabuleiroDAO.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/dao/TabuleiroDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="45" lean-forward="false" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1568921786049" expanded="true" signature="624:706" ph="INSERT INTO tabuleiro... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tabelas.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/sql/tabelas.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="2" lean-forward="false" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+            <state relative-caret-position="187">
+              <caret line="11" column="51" lean-forward="false" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -166,14 +62,93 @@
       <file leaf-file-name="Tabuleiro.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/beans/Tabuleiro.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="166" column="28" lean-forward="false" selection-start-line="166" selection-start-column="28" selection-end-line="166" selection-end-column="28" />
+            <state relative-caret-position="272">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tabelas.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/sql/tabelas.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UsuarioDAO.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/dao/UsuarioDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding>
-                <element signature="method#Tabuleiro#0;class#Tabuleiro#0" expanded="false" />
-                <element signature="method#setarMatriz#0;class#Tabuleiro#0" expanded="false" />
-                <element signature="method#pedra#0;class#Tabuleiro#0" expanded="false" />
-                <element signature="method#verifica#0;class#Tabuleiro#0" expanded="false" />
-                <element signature="method#valida#0;class#Tabuleiro#0" expanded="false" />
+                <marker date="1569009261186" expanded="true" signature="736:783" ph="INSERT INTO usuarios... " />
+                <marker date="1569009261186" expanded="true" signature="1491:1560" ph="SELECT * FRO... usuarios" />
+                <marker date="1569009261186" expanded="true" signature="2292:2359" ph="SELECT * FRO... usuarios" />
+                <marker date="1569009261186" expanded="true" signature="3031:3071" ph="DELETE FROM usuarios... " />
+                <marker date="1569009261186" expanded="true" signature="3711:3733" ph="SELECT * FRO... usuarios" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthenticationSuccessHandlerImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/config/AuthenticationSuccessHandlerImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="40" column="9" lean-forward="false" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JogoDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/dao/JogoDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="59" column="41" lean-forward="false" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="41" />
+              <folding>
+                <element signature="method#getById#0;class#JogoDAO#0" expanded="false" />
+                <element signature="method#cadastrar#0;class#JogoDAO#0" expanded="false" />
+                <element signature="method#deleteById#0;class#JogoDAO#0" expanded="false" />
+                <marker date="1569009635477" expanded="true" signature="3029:3047" ph="SELECT * FRO... jogo" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProjectApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/ProjectApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="22" column="9" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jogosCriadosController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/controllers/jogosCriadosController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/controllers/IndexController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="687">
+              <caret line="81" column="36" lean-forward="false" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -188,12 +163,8 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>buleiro</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -204,20 +175,22 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/controllers/jogosCriadosController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/RepositorioTabuleiro.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/Repositorio.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/controllers/IndexController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/DatabaseConnection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/sql/tabelas.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/dao/UsuarioDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/dao/TabelaDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/ProjectApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/beans/Tabuleiro.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/user/Usario.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/Usario.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/Usuario.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/beans/Jogo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/dao/JogoDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/user/Usuario.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/user/Detalhes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/Repositorio.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/config/WebConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/config/AuthenticationSuccessHandlerImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/ProjectApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/controllers/jogosCriadosController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/beans/Tabuleiro.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/dao/TabuleiroDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/controllers/IndexController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/DatabaseConnection.java" />
       </list>
     </option>
   </component>
@@ -234,7 +207,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="260" />
     <option name="y" value="20" />
     <option name="width" value="1400" />
@@ -258,7 +231,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -337,6 +310,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="mastermind" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mastermind" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mastermind" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mastermind" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -359,40 +341,26 @@
               <item name="model" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="mastermind" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mastermind" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mastermind" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mastermind" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth2" value="75" />
-    <property name="RequestMappingsPanelOrder2" value="2" />
-    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.rodemarck.mastermind.model" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -513,25 +481,34 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="694aa7f0-4cf0-41b2-b023-c1fa332d4e5e" name="Default" comment="" />
-      <created>1568823943187</created>
+      <changelist id="bc7526c2-1454-46ad-87d5-5f17afda77fb" name="Default" comment="" />
+      <created>1568403864470</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1568823943187</updated>
-      <workItem from="1568823951351" duration="3457000" />
-      <workItem from="1568841242600" duration="3053000" />
-      <workItem from="1568918900806" duration="3019000" />
+      <updated>1568403864470</updated>
+      <workItem from="1568403873381" duration="4500000" />
+      <workItem from="1569008210381" duration="210000" />
+      <workItem from="1569008427626" duration="5144000" />
     </task>
+    <task id="LOCAL-00001" summary="sla cara">
+      <created>1568408330438</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1568408330439</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9529000" />
+    <option name="totallyTimeSpent" value="9854000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="260" y="20" width="1400" height="1000" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32911393" sideWeight="0.50298506" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -541,16 +518,16 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.4858209" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31783783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32911393" sideWeight="0.49701494" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.4910448" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32864866" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25373134" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18443497" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -569,378 +546,239 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="sla cara" />
+    <option name="LAST_COMMIT_MESSAGE" value="sla cara" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/ProjectApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+        <state relative-caret-position="187">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/controllers/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/Usuario.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/user/Detalhes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="15" lean-forward="false" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/Repositorio.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2057">
-          <caret line="121" column="36" lean-forward="false" selection-start-line="121" selection-start-column="36" selection-end-line="121" selection-end-column="36" />
+        <state relative-caret-position="34">
+          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/user/Usuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1094#1095#0" expanded="true" />
-            <element signature="e#1119#1120#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/beans/Jogo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-          <folding>
-            <element signature="e#868#869#0" expanded="true" />
-            <element signature="e#893#894#0" expanded="true" />
-            <element signature="e#929#930#0" expanded="true" />
-            <element signature="e#959#960#0" expanded="true" />
-            <element signature="e#1006#1007#0" expanded="true" />
-            <element signature="e#1044#1045#0" expanded="true" />
-            <element signature="e#1088#1089#0" expanded="true" />
-            <element signature="e#1121#1122#0" expanded="true" />
-            <element signature="e#1180#1181#0" expanded="true" />
-            <element signature="e#1224#1225#0" expanded="true" />
-            <element signature="e#1255#1256#0" expanded="true" />
-            <element signature="e#1282#1283#0" expanded="true" />
-            <element signature="e#1322#1323#0" expanded="true" />
-            <element signature="e#1354#1355#0" expanded="true" />
-            <element signature="e#1388#1389#0" expanded="true" />
-            <element signature="e#1419#1420#0" expanded="true" />
-            <element signature="e#1466#1467#0" expanded="true" />
-            <element signature="e#1506#1507#0" expanded="true" />
-            <element signature="e#1547#1548#0" expanded="true" />
-            <element signature="e#1584#1585#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/DatabaseConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="47" lean-forward="false" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
+        <state relative-caret-position="136">
+          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/dao/UsuarioDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/config/WebConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state relative-caret-position="663">
+          <caret line="52" column="38" lean-forward="false" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#cadastrar#0;class#UsuarioDAO#0" expanded="false" />
-            <element signature="method#getByNome#0;class#UsuarioDAO#0" expanded="false" />
-            <element signature="method#getById#0;class#UsuarioDAO#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="58" column="8" lean-forward="false" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/beans/Tabuleiro.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="36" column="28" lean-forward="false" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/Usuario.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/beans/Jogo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="58" column="8" lean-forward="false" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/user/Detalhes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="24" column="34" lean-forward="false" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/Repositorio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/config/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="586">
+          <caret line="58" column="68" lean-forward="false" selection-start-line="58" selection-start-column="68" selection-end-line="58" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/config/AuthenticationSuccessHandlerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="9" lean-forward="false" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/dao/JogoDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getById#0;class#JogoDAO#0" expanded="false" />
-            <element signature="method#deleteById#0;class#JogoDAO#0" expanded="false" />
-            <marker date="1568921285546" expanded="true" signature="754:829" ph="SELECT * FRO... usuarios" />
-            <marker date="1568921285546" expanded="true" signature="1477:1550" ph="INSERT INTO jogo... " />
-            <marker date="1568921285546" expanded="true" signature="2297:2329" ph="DELETE FROM jogo... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/dao/TabuleiroDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1568921786049" expanded="true" signature="624:706" ph="INSERT INTO tabuleiro... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/beans/Tabuleiro.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="17" column="4" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-          <folding>
-            <element signature="method#Tabuleiro#0;class#Tabuleiro#0" expanded="false" />
-            <element signature="method#setarMatriz#0;class#Tabuleiro#0" expanded="false" />
-            <element signature="method#pedra#0;class#Tabuleiro#0" expanded="false" />
-            <element signature="method#verifica#0;class#Tabuleiro#0" expanded="false" />
-            <element signature="method#valida#0;class#Tabuleiro#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/sql/tabelas.sql">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/controllers/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/Repositorio.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2057">
-          <caret line="121" column="36" lean-forward="false" selection-start-line="121" selection-start-column="36" selection-end-line="121" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/RepositorioTabuleiro.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="33" lean-forward="false" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="33" />
+          <caret line="59" column="41" lean-forward="false" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="41" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#562#563#0" expanded="false" />
-            <element signature="e#592#593#0" expanded="false" />
-            <element signature="e#643#644#0" expanded="false" />
-            <element signature="e#676#677#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/beans/Jogo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="34" lean-forward="false" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-          <folding>
-            <element signature="e#868#869#0" expanded="true" />
-            <element signature="e#893#894#0" expanded="true" />
-            <element signature="e#929#930#0" expanded="true" />
-            <element signature="e#959#960#0" expanded="true" />
-            <element signature="e#1006#1007#0" expanded="true" />
-            <element signature="e#1044#1045#0" expanded="true" />
-            <element signature="e#1088#1089#0" expanded="true" />
-            <element signature="e#1121#1122#0" expanded="true" />
-            <element signature="e#1180#1181#0" expanded="true" />
-            <element signature="e#1224#1225#0" expanded="true" />
-            <element signature="e#1255#1256#0" expanded="true" />
-            <element signature="e#1282#1283#0" expanded="true" />
-            <element signature="e#1322#1323#0" expanded="true" />
-            <element signature="e#1354#1355#0" expanded="true" />
-            <element signature="e#1388#1389#0" expanded="true" />
-            <element signature="e#1419#1420#0" expanded="true" />
-            <element signature="e#1466#1467#0" expanded="true" />
-            <element signature="e#1506#1507#0" expanded="true" />
-            <element signature="e#1547#1548#0" expanded="true" />
-            <element signature="e#1584#1585#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/controllers/jogosCriadosController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="23" column="27" lean-forward="true" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/RepositorioTabuleiro.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="27" column="33" lean-forward="false" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#562#563#0" expanded="false" />
-            <element signature="e#592#593#0" expanded="false" />
-            <element signature="e#643#644#0" expanded="false" />
-            <element signature="e#676#677#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/controllers/jogosCriadosController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="23" column="27" lean-forward="false" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/controllers/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="78" column="66" lean-forward="false" selection-start-line="78" selection-start-column="66" selection-end-line="78" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/Repositorio.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="121" column="36" lean-forward="false" selection-start-line="121" selection-start-column="36" selection-end-line="121" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/sql/tabelas.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="2" lean-forward="false" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/DatabaseConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="39" column="47" lean-forward="false" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/dao/UsuarioDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="91" column="5" lean-forward="false" selection-start-line="76" selection-start-column="4" selection-end-line="91" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#cadastrar#0;class#UsuarioDAO#0" expanded="false" />
-            <element signature="method#getByNome#0;class#UsuarioDAO#0" expanded="false" />
-            <element signature="method#getById#0;class#UsuarioDAO#0" expanded="false" />
+            <element signature="method#getById#0;class#JogoDAO#0" expanded="false" />
+            <element signature="method#cadastrar#0;class#JogoDAO#0" expanded="false" />
+            <element signature="method#deleteById#0;class#JogoDAO#0" expanded="false" />
+            <marker date="1569009635477" expanded="true" signature="3029:3047" ph="SELECT * FRO... jogo" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/ProjectApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="32" column="44" lean-forward="false" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
+        <state relative-caret-position="255">
+          <caret line="22" column="9" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/controllers/jogosCriadosController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/beans/Tabuleiro.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="166" column="28" lean-forward="false" selection-start-line="166" selection-start-column="28" selection-end-line="166" selection-end-column="28" />
-          <folding>
-            <element signature="method#Tabuleiro#0;class#Tabuleiro#0" expanded="false" />
-            <element signature="method#setarMatriz#0;class#Tabuleiro#0" expanded="false" />
-            <element signature="method#pedra#0;class#Tabuleiro#0" expanded="false" />
-            <element signature="method#verifica#0;class#Tabuleiro#0" expanded="false" />
-            <element signature="method#valida#0;class#Tabuleiro#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/beans/Jogo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#868#869#0" expanded="true" />
-            <element signature="e#893#894#0" expanded="true" />
-            <element signature="e#929#930#0" expanded="true" />
-            <element signature="e#959#960#0" expanded="true" />
-            <element signature="e#1006#1007#0" expanded="true" />
-            <element signature="e#1044#1045#0" expanded="true" />
-            <element signature="e#1088#1089#0" expanded="true" />
-            <element signature="e#1121#1122#0" expanded="true" />
-            <element signature="e#1180#1181#0" expanded="true" />
-            <element signature="e#1224#1225#0" expanded="true" />
-            <element signature="e#1255#1256#0" expanded="true" />
-            <element signature="e#1282#1283#0" expanded="true" />
-            <element signature="e#1322#1323#0" expanded="true" />
-            <element signature="e#1354#1355#0" expanded="true" />
-            <element signature="e#1388#1389#0" expanded="true" />
-            <element signature="e#1419#1420#0" expanded="true" />
-            <element signature="e#1466#1467#0" expanded="true" />
-            <element signature="e#1506#1507#0" expanded="true" />
-            <element signature="e#1547#1548#0" expanded="true" />
-            <element signature="e#1584#1585#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/user/Usuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="47" column="14" lean-forward="true" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1094#1095#0" expanded="true" />
-            <element signature="e#1119#1120#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/dao/JogoDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="45" column="51" lean-forward="false" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getById#0;class#JogoDAO#0" expanded="false" />
-            <element signature="method#deleteById#0;class#JogoDAO#0" expanded="false" />
-            <marker date="1568921285546" expanded="true" signature="754:829" ph="SELECT * FRO... usuarios" />
-            <marker date="1568921285546" expanded="true" signature="1477:1550" ph="INSERT INTO jogo... " />
-            <marker date="1568921285546" expanded="true" signature="2297:2329" ph="DELETE FROM jogo... " />
-          </folding>
+        <state relative-caret-position="272">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/dao/TabuleiroDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="45" lean-forward="false" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+        <state relative-caret-position="551">
+          <caret line="172" column="28" lean-forward="false" selection-start-line="172" selection-start-column="28" selection-end-line="172" selection-end-column="28" />
+          <folding>
+            <element signature="method#cadastrar#0;class#TabuleiroDAO#0" expanded="false" />
+            <element signature="method#getById#0;class#TabuleiroDAO#0" expanded="false" />
+            <element signature="method#listar#0;class#TabuleiroDAO#0" expanded="false" />
+            <element signature="method#listarByJogador#0;class#TabuleiroDAO#0" expanded="false" />
+            <element signature="method#listarByJogo#0;class#TabuleiroDAO#0" expanded="false" />
+            <element signature="method#fazerJogada#0;class#TabuleiroDAO#0" expanded="false" />
+            <marker date="1569012373292" expanded="true" signature="5891:5914" ph="SELECT * FRO... tabuleiro" />
+            <marker date="1569012373292" expanded="true" signature="5891:6134" ph="SELECT * FRO... tabuleiro" />
+            <marker date="1569012373292" expanded="true" signature="5891:6189" ph="SELECT * FRO... tabuleiro" />
+            <marker date="1569012373292" expanded="true" signature="5891:6235" ph="SELECT * FRO... tabuleiro" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/controllers/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="687">
+          <caret line="81" column="36" lean-forward="false" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1568921786049" expanded="true" signature="624:706" ph="INSERT INTO tabuleiro... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/RepositorioTabuleiro.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="31" column="22" lean-forward="false" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/DatabaseConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="51" lean-forward="false" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/sql/tabelas.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/dao/UsuarioDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <marker date="1569009261186" expanded="true" signature="736:783" ph="INSERT INTO usuarios... " />
+            <marker date="1569009261186" expanded="true" signature="1491:1560" ph="SELECT * FRO... usuarios" />
+            <marker date="1569009261186" expanded="true" signature="2292:2359" ph="SELECT * FRO... usuarios" />
+            <marker date="1569009261186" expanded="true" signature="3031:3071" ph="DELETE FROM usuarios... " />
+            <marker date="1569009261186" expanded="true" signature="3711:3733" ph="SELECT * FRO... usuarios" />
           </folding>
         </state>
       </provider>
@@ -950,6 +788,7 @@
     <states>
       <state key="ProjectJDKs.UI">
         <settings>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -5,25 +5,24 @@
  */
 package com.rodemarck.mastermind.controllers;
 
-import com.rodemarck.mastermind.model.Repositorio;
+import com.rodemarck.mastermind.connection.dao.JogoDAO;
+import com.rodemarck.mastermind.connection.dao.TabuleiroDAO;
 import com.rodemarck.mastermind.model.beans.Jogo;
 import com.rodemarck.mastermind.model.beans.Tabuleiro;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.sql.SQLException;
 import java.util.Arrays;
-import java.util.List;
+
+import com.rodemarck.mastermind.model.user.Usuario;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.lang.Nullable;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -32,27 +31,28 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 public class IndexController {
     @RequestMapping("/")
-    public ModelAndView index(@AuthenticationPrincipal UserDetails userDetails, String id) throws IOException{
+    public ModelAndView index(HttpSession session, String id) throws SQLException, ClassNotFoundException {
         if(id == null){
             return new ModelAndView("redirect:/jogosCriados");
         }
         Jogo tab = null;
         int jId = Integer.parseInt(id);
-        for(Jogo t : Repositorio.getInstance().getJogos())
+        for(Jogo t : JogoDAO.listar())
             if(t.getId() == jId){
                 tab = t;
                 break;
             }
         if(tab == null)
             return new ModelAndView("redirect:/jogosCriados");
-        Tabuleiro t = Repositorio.getInstance().getPartida(userDetails.getUsername(),jId);
+        System.out.println((Usuario) session.getAttribute("conta"));
+        Tabuleiro t = TabuleiroDAO.tabuleiroDoJogo((Usuario) session.getAttribute("conta"),jId);
         ModelAndView mv = new ModelAndView("index");
         mv.addObject("tabuleiro",t);
         return mv;
     }
     
     @RequestMapping(value="/fazEscolha", method = RequestMethod.GET)
-    public ResponseEntity<String> fazEscolha(@AuthenticationPrincipal UserDetails userDetails, int id, int index, int e1, int e2, int e3, int e4) {
+    public ResponseEntity<String> fazEscolha(HttpSession session, int id, int index, int e1, int e2, int e3, int e4) {
         int[] escolhas = new int[]{ e1,e2,e3,e4};
         System.out.println("id>>"+id);
         System.out.println("index>>"+index);
@@ -60,30 +60,26 @@ public class IndexController {
         System.out.println();
         index --;
         try{
-            Tabuleiro t = Repositorio.getInstance().getPartida(userDetails.getUsername(),id);
+            Tabuleiro t = TabuleiroDAO.tabuleiroDoJogo((Usuario) session.getAttribute("conta"),id);
             if(t.valida()){
                 return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             }if(t.getIndex()<=0){
                 return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
             }
             t.setarMatriz(escolhas);
-            try{
-                Repositorio.escreve();
-            }catch(IOException e){}
             if(t.valida()){
                 return new ResponseEntity<>(HttpStatus.ACCEPTED);
-            }return new ResponseEntity<>(HttpStatus.OK);
-        }catch(IOException e){
-            
-        }finally{
-        }
-        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            }
+            return new ResponseEntity<>(HttpStatus.OK);
+        }catch(SQLException | ClassNotFoundException e){
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }finally{}
+
     }
 
     @RequestMapping("/carrega")
-    private String fazEscolhas(@AuthenticationPrincipal UserDetails userDetails,String id,Model model) throws IOException {
-        int TabuleiroId = Integer.parseInt(id);
-        Tabuleiro t = Repositorio.getInstance().getPartida(userDetails.getUsername(),TabuleiroId);
+    private String fazEscolhas(HttpSession session,int id,Model model) throws IOException, SQLException, ClassNotFoundException {
+        Tabuleiro t = TabuleiroDAO.tabuleiroDoJogo((Usuario) session.getAttribute("conta"),id);
         model.addAttribute("tabuleiro",t);
         return "index :: #linhas";
     }

@@ -2,6 +2,7 @@ package com.rodemarck.mastermind.connection.dao;
 
 import com.rodemarck.mastermind.connection.DatabaseConnection;
 import com.rodemarck.mastermind.model.beans.Tabuleiro;
+import com.rodemarck.mastermind.model.user.Usuario;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -40,7 +41,7 @@ public class TabuleiroDAO {
             con = DatabaseConnection.getInstance().getConnection();
             stmt = con.prepareStatement(
                     "SELECT * FROM tabuleiro "
-                    + "WHERE tabuleiro.id=?"
+                            + "WHERE tabuleiro.id=?"
             );
             stmt.setInt(1, id);
             rs = stmt.executeQuery();
@@ -86,7 +87,7 @@ public class TabuleiroDAO {
             con = DatabaseConnection.getInstance().getConnection();
             stmt = con.prepareStatement(
                     "SELECT * FROM tabuleiro "
-                    + "where tabuleiro.id_jogador=?"
+                            + "where tabuleiro.id_jogador=?"
             );
             stmt.setInt(1, id_jogador);
             rs = stmt.executeQuery();
@@ -110,7 +111,7 @@ public class TabuleiroDAO {
             con = DatabaseConnection.getInstance().getConnection();
             stmt = con.prepareStatement(
                     "SELECT * FROM tabuleiro "
-                    + "where tabuleiro.id_jogo=?"
+                            + "where tabuleiro.id_jogo=?"
             );
             stmt.setInt(1, id_jogo);
             rs = stmt.executeQuery();
@@ -132,10 +133,10 @@ public class TabuleiroDAO {
             con = DatabaseConnection.getInstance().getConnection();
             stmt = con.prepareStatement(
                     "UPDATE tabuleiro SET "
-                    + "tabuleiro.matriz=? "
-                    + "tabuleiro.pedras=? "
-                    + "tabuleiro.indice=? "
-                    + "WHERE tabuleiro.id=?"
+                            + "tabuleiro.matriz=? "
+                            + "tabuleiro.pedras=? "
+                            + "tabuleiro.indice=? "
+                            + "WHERE tabuleiro.id=?"
             );
             stmt.setString(1, t.getMatrizString());
             stmt.setString(2, t.getPedraString());
@@ -147,6 +148,38 @@ public class TabuleiroDAO {
             DatabaseConnection.getInstance().close(con, stmt);
         }
     }
-    
-    
+
+    public static Tabuleiro tabuleiroDoJogo(Usuario usuario, int id_jogo) throws SQLException, ClassNotFoundException {
+        Connection con = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        Tabuleiro t = null;
+        try {
+            con = DatabaseConnection.getInstance().getConnection();
+            stmt = con.prepareStatement(
+                    "SELECT * FROM tabuleiro " +
+                            "INNER JOIN jogo " +
+                            "ON tabuleiro.id_jogo=jogo.id " +
+                            "WHERE tabuleiro.id_jogador=? " +
+                            "AND jogo.id=? " +
+                            "ORDER BY tabuleiro.id DESC " +
+                            "LIMIT 1"
+            );
+            stmt.setInt(1, usuario.getId());
+            stmt.setInt(2, id_jogo);
+            rs = stmt.executeQuery();
+            if (rs.next())
+                t = new Tabuleiro(rs);
+            if(t == null || t.valida()){
+                TabuleiroDAO.cadastrar(new Tabuleiro(usuario,JogoDAO.getById(id_jogo)));
+                return tabuleiroDoJogo(usuario, id_jogo);
+            }
+
+        } catch (SQLException | ClassNotFoundException e) {
+            throw e;
+        } finally {
+            DatabaseConnection.getInstance().close(con, rs, stmt);
+        }
+        return t;
+    }
 }

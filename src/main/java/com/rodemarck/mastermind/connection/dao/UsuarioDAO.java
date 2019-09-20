@@ -2,13 +2,13 @@ package com.rodemarck.mastermind.connection.dao;
 
 import com.rodemarck.mastermind.connection.DatabaseConnection;
 import com.rodemarck.mastermind.model.user.Usuario;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 public class UsuarioDAO {
 

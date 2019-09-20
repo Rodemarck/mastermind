@@ -1,10 +1,10 @@
 package com.rodemarck.mastermind;
 
-import com.rodemarck.mastermind.model.Repositorio;
+import com.rodemarck.mastermind.connection.dao.JogoDAO;
+import com.rodemarck.mastermind.connection.dao.UsuarioDAO;
 import com.rodemarck.mastermind.model.beans.Jogo;
-import com.rodemarck.mastermind.model.beans.Tabuleiro;
-import com.rodemarck.mastermind.model.user.Usuario;
-import java.io.IOException;
+
+import java.sql.SQLException;
 import java.time.LocalDateTime;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,10 +14,12 @@ public class ProjectApplication {
 
     public static void main(String[] args) {
         try {
-            Repositorio.getInstance().getUsuarios().add(new Usuario("rode", "123"));
-            Repositorio.getInstance().getJogos().add(new Jogo(Repositorio.getInstance().getUsuarios().get(0), LocalDateTime.now(), "nome", 1, new int[]{1, 2, 3, 4, 5}));
-        } catch (IOException e) {
-            System.out.println(e);
+            UsuarioDAO.cadastrar("rode","123");
+            JogoDAO.cadastrar(new Jogo(UsuarioDAO.getById(0), LocalDateTime.now(), "nome", 1, new int[]{1, 2, 3, 4, 5}));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
         SpringApplication.run(ProjectApplication.class, args);
 
