@@ -27,8 +27,9 @@ $(function() {
 
 function fazEscolhas() {
     a = getLinha(position);
+    let v = new Array(4)
     for(let x = 0 ; x < 4 ; x++){
-        escolhas[x] = getClasse($(a).find('#'+x).attr('class'));        
+        escolhas[x] = vectorCores.indexOf(getClasse($(a).find('#'+x).attr('class')));   
         //$(a).find('#'+x).removeClass(escolhas[x]).addClass("classe white");
     }
     let dados = {
@@ -39,11 +40,16 @@ function fazEscolhas() {
         e3:escolhas[2],
         e4:escolhas[3]
     };
+    
     console.log(dados);
     $.get('/fazEscolha',dados)
             .done(function (){
                 mataButton("botao"+position);
                 position--;
+                $('#linhas').load('/carrega')
+                        .fail(function(){
+                            location.reload();
+                        });
                 
     })
             .fail(function (xhr, textStatus, errorThrown){

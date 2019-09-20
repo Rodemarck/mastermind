@@ -7,24 +7,26 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 public class UsuarioDAO {
 
     public static void cadastrar(String login, String senha) throws SQLException, ClassNotFoundException {
         Connection con = null;
         PreparedStatement stmt = null;
-        try{
+        try {
             con = DatabaseConnection.getInstance().getConnection();
             stmt = con.prepareStatement(
                     "INSERT INTO usuarios (login,senha) VALUES (?,?)"
             );
-            stmt.setString(1,login);
-            stmt.setString(2,senha);
+            stmt.setString(1, login);
+            stmt.setString(2, new BCryptPasswordEncoder().encode(senha));
             stmt.executeUpdate();
-        }catch (SQLException | ClassNotFoundException e){
+        } catch (SQLException | ClassNotFoundException e) {
             throw e;
-        }finally{
-            DatabaseConnection.getInstance().close(con,stmt);
+        } finally {
+            DatabaseConnection.getInstance().close(con, stmt);
         }
     }
 
@@ -33,20 +35,21 @@ public class UsuarioDAO {
         PreparedStatement stmt = null;
         ResultSet rs = null;
         Usuario u = null;
-        try{
+        try {
             con = DatabaseConnection.getInstance().getConnection();
             stmt = con.prepareStatement(
-                    "SELECT * FROM usuarios " +
-                            "WHERE usuarios.nome=?"
+                    "SELECT * FROM usuarios "
+                    + "WHERE usuarios.nome=?"
             );
-            stmt.setString(1,nome);
+            stmt.setString(1, nome);
             rs = stmt.executeQuery();
-            if(rs.next())
+            if (rs.next()) {
                 u = new Usuario(rs);
-        }catch (SQLException | ClassNotFoundException e){
+            }
+        } catch (SQLException | ClassNotFoundException e) {
             throw e;
-        }finally{
-            DatabaseConnection.getInstance().close(con,rs,stmt);
+        } finally {
+            DatabaseConnection.getInstance().close(con, rs, stmt);
         }
         return u;
     }
@@ -56,20 +59,21 @@ public class UsuarioDAO {
         PreparedStatement stmt = null;
         ResultSet rs = null;
         Usuario u = null;
-        try{
+        try {
             con = DatabaseConnection.getInstance().getConnection();
             stmt = con.prepareStatement(
-                    "SELECT * FROM usuarios " +
-                            "WHERE usuarios.id=?"
+                    "SELECT * FROM usuarios "
+                    + "WHERE usuarios.id=?"
             );
-            stmt.setInt(1,id);
+            stmt.setInt(1, id);
             rs = stmt.executeQuery();
-            if(rs.next())
+            if (rs.next()) {
                 u = new Usuario(rs);
-        }catch (SQLException | ClassNotFoundException e){
+            }
+        } catch (SQLException | ClassNotFoundException e) {
             throw e;
-        }finally{
-            DatabaseConnection.getInstance().close(con,rs,stmt);
+        } finally {
+            DatabaseConnection.getInstance().close(con, rs, stmt);
         }
         return u;
     }
@@ -77,19 +81,39 @@ public class UsuarioDAO {
     public static void deleteById(int id) throws SQLException, ClassNotFoundException {
         Connection con = null;
         PreparedStatement stmt = null;
-        try{
+        try {
             con = DatabaseConnection.getInstance().getConnection();
             stmt = con.prepareStatement(
                     "DELETE FROM usuarios WHERE usuarios.id=?"
             );
-            stmt.setInt(1,id);
+            stmt.setInt(1, id);
             stmt.executeUpdate();
-        }catch (SQLException | ClassNotFoundException e){
+        } catch (SQLException | ClassNotFoundException e) {
             throw e;
-        }finally{
-            DatabaseConnection.getInstance().close(con,stmt);
+        } finally {
+            DatabaseConnection.getInstance().close(con, stmt);
         }
     }
 
-
+    public static ArrayList<Usuario> listar() throws SQLException,  ClassNotFoundException {
+        Connection con = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        ArrayList<Usuario> list = null;
+        try {
+            con = DatabaseConnection.getInstance().getConnection();
+            stmt = con.prepareStatement(
+                    "SELECT * FROM usuarios "
+            );
+            rs = stmt.executeQuery();
+            while (rs.next()) {
+                list.add(new Usuario(rs));
+            }
+        } catch (SQLException | ClassNotFoundException e) {
+            throw e;
+        } finally {
+            DatabaseConnection.getInstance().close(con, rs, stmt);
+        }
+        return list;
+    }
 }

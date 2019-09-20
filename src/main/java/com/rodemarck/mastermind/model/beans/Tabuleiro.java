@@ -2,6 +2,7 @@ package com.rodemarck.mastermind.model.beans;
 
 import com.rodemarck.mastermind.model.user.Usuario;
 import java.io.Serializable;
+import java.sql.ResultSet;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,7 +32,12 @@ public class Tabuleiro implements Serializable{
             }
     }
 
+    public Tabuleiro(ResultSet rs) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public void setarMatriz(int ... vector){
+        System.out.println("chegou >>"+Arrays.toString(vector));
         for(int x=0;x<4;x++)
             this.matriz[index][x] = vector[x];
         verifica(index);
@@ -141,6 +147,7 @@ public class Tabuleiro implements Serializable{
 
     public boolean valida(){
         int cont;
+        System.out.println(this.jogo);
         System.out.println("respostas{\n\t");
         for(int s:this.jogo.getResposta())
             System.out.print(s+",");

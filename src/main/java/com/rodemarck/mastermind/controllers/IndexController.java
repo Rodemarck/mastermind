@@ -11,6 +11,7 @@ import com.rodemarck.mastermind.model.beans.Tabuleiro;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.lang.Nullable;
@@ -19,6 +20,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.servlet.ModelAndView;
@@ -50,16 +52,15 @@ public class IndexController {
     }
     
     @RequestMapping(value="/fazEscolha", method = RequestMethod.GET)
-    public ResponseEntity<String> fazEscolha(@AuthenticationPrincipal UserDetails userDetails,String id, String index, String e1, String e2, String e3, String e4) {
-        int[] escolhas = new int[]{ Tabuleiro.getVectorCores().indexOf(e1),
-                                    Tabuleiro.getVectorCores().indexOf(e2),
-                                    Tabuleiro.getVectorCores().indexOf(e3),
-                                    Tabuleiro.getVectorCores().indexOf(e4)
-        };
-        int TabuleiroId = Integer.parseInt(id);
-        int in = Integer.parseInt(index) - 1;
+    public ResponseEntity<String> fazEscolha(@AuthenticationPrincipal UserDetails userDetails, int id, int index, int e1, int e2, int e3, int e4) {
+        int[] escolhas = new int[]{ e1,e2,e3,e4};
+        System.out.println("id>>"+id);
+        System.out.println("index>>"+index);
+        System.out.print("vector>>"+Arrays.toString(escolhas));
+        System.out.println();
+        index --;
         try{
-            Tabuleiro t = Repositorio.getInstance().getPartida(userDetails.getUsername(),TabuleiroId);
+            Tabuleiro t = Repositorio.getInstance().getPartida(userDetails.getUsername(),id);
             if(t.valida()){
                 return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             }if(t.getIndex()<=0){
@@ -76,10 +77,10 @@ public class IndexController {
             
         }finally{
         }
-        return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
-    @RequestMapping("/fazEscolha")
+    @RequestMapping("/carrega")
     private String fazEscolhas(@AuthenticationPrincipal UserDetails userDetails,String id,Model model) throws IOException {
         int TabuleiroId = Integer.parseInt(id);
         Tabuleiro t = Repositorio.getInstance().getPartida(userDetails.getUsername(),TabuleiroId);
