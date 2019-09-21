@@ -182,4 +182,28 @@ public class TabuleiroDAO {
         }
         return t;
     }
+
+    public static ArrayList<Tabuleiro> listarByJogadorAndJogo(int id_jogador, int id_jogo) throws SQLException, ClassNotFoundException {
+        Connection con = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        ArrayList<Tabuleiro> list = new ArrayList<>();
+        try {
+            con = DatabaseConnection.getInstance().getConnection();
+            stmt = con.prepareStatement(
+                    "SELECT FROM tabuleiro "+
+                    "WHERE tabuleiro.id_jogador=?"
+            );
+            stmt.setInt(1, id_jogador);
+            rs = stmt.executeQuery();
+            while (rs.next()) {
+                list.add(new Tabuleiro(rs));
+            }
+        } catch (SQLException | ClassNotFoundException e) {
+            throw e;
+        } finally {
+            DatabaseConnection.getInstance().close(con, rs, stmt);
+        }
+        return list;
+    }
 }
