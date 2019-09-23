@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc7526c2-1454-46ad-87d5-5f17afda77fb" name="Default" comment="sla cara">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/js/cadastro.js" />
+    <list default="true" id="bc7526c2-1454-46ad-87d5-5f17afda77fb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/config/Err.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/config/WebConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/config/WebConfig.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/dao/JogoDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/connection/dao/JogoDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/controllers/CadastroController.java" afterPath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/controllers/CadastroController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/controllers/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/controllers/LoginController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/controllers/jogosCriadosController.java" afterPath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/controllers/jogosCriadosController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/beans/Jogo.java" afterPath="$PROJECT_DIR$/src/main/java/com/rodemarck/mastermind/model/beans/Jogo.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/salaoScript.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/salaoScript.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cadastro.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/cadastro.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/jogosCriados.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/jogosCriados.html" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -520,7 +509,7 @@
       <workItem from="1569008427626" duration="5144000" />
       <workItem from="1569256821364" duration="2091000" />
       <workItem from="1569267221339" duration="3805000" />
-      <workItem from="1569272427059" duration="5759000" />
+      <workItem from="1569272427059" duration="5896000" />
     </task>
     <task id="LOCAL-00001" summary="sla cara">
       <created>1568408330438</created>
@@ -529,18 +518,25 @@
       <option name="project" value="LOCAL" />
       <updated>1568408330439</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="sla cara">
+      <created>1569278217800</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1569278217800</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21509000" />
+    <option name="totallyTimeSpent" value="21646000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32805908" sideWeight="0.5104167" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31751055" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -550,12 +546,12 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39978904" sideWeight="0.49583334" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31783783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31751055" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32805908" sideWeight="0.48958334" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32805908" sideWeight="0.48958334" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
