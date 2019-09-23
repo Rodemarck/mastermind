@@ -39,7 +39,7 @@ public class UsuarioDAO {
             con = DatabaseConnection.getInstance().getConnection();
             stmt = con.prepareStatement(
                     "SELECT * FROM usuarios "
-                    + "WHERE usuarios.nome=?"
+                    + "WHERE usuarios.login=?"
             );
             stmt.setString(1, nome);
             rs = stmt.executeQuery();

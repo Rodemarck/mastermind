@@ -8,20 +8,17 @@ import java.sql.SQLException;
 import java.time.LocalDateTime;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @SpringBootApplication
 public class ProjectApplication {
 
     public static void main(String[] args) {
-        try {
-            UsuarioDAO.cadastrar("rode","123");
-            JogoDAO.cadastrar(new Jogo(UsuarioDAO.getById(0), LocalDateTime.now(), "nome", 1, new int[]{1, 2, 3, 4, 5}));
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-        SpringApplication.run(ProjectApplication.class, args);
+        BCryptPasswordEncoder b = new BCryptPasswordEncoder();
+        String s = b.encode("1234");
+        System.out.println(b.matches("1234",s));
+        System.out.println(s);
+        //SpringApplication.run(ProjectApplication.class, args);
 
     }
 
