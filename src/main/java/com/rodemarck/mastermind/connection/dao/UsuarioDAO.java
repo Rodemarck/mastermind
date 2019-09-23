@@ -21,7 +21,10 @@ public class UsuarioDAO {
                     "INSERT INTO usuarios (login,senha) VALUES (?,?)"
             );
             stmt.setString(1, login);
-            stmt.setString(2, new BCryptPasswordEncoder().encode(senha));
+
+            String s = new BCryptPasswordEncoder().encode(senha);
+            stmt.setString(2, s);
+            System.out.println(">>"+s);
             stmt.executeUpdate();
         } catch (SQLException | ClassNotFoundException e) {
             throw e;

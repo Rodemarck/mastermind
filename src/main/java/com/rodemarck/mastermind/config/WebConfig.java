@@ -38,10 +38,11 @@ public class WebConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     AuthenticationSuccessHandler authenticationSuccessHandler;
 
+    @Autowired
+    Err err;
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        System.out.println("socorro!!!"+ auth.toString());
-
         auth.userDetailsService(detalhes).passwordEncoder(new BCryptPasswordEncoder());
     }
 
@@ -59,6 +60,7 @@ public class WebConfig extends WebSecurityConfigurerAdapter {
                 .loginPage("/logar")
                     .permitAll()
                         .successHandler(authenticationSuccessHandler)
+                        .failureHandler(err)
             .and()
             .logout()
                 .logoutUrl("/deslogar")

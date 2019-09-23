@@ -17,6 +17,10 @@
                 <th>nome</th>
             </thead>
             <tbody>
+            <button id="nJogo">Criar novo jogo</button>
+            <div></div>
+
+
                 <tr th:each="jogo,jogoIndex : ${jogos}" th:attr="data-url=${jogo.id}">
                         <td><span th:text="${jogo.criador.login}"></span></td>
                         <td><span th:text="${jogo.dataCricao}"></span></td>

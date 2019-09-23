@@ -26,7 +26,7 @@ public class Detalhes implements UserDetailsService{
                 throw new UsernameNotFoundException("nome de usario não encontrado");
             System.out.println("e....");
             List<GrantedAuthority> grantedAuthority = AuthorityUtils.createAuthorityList("user");
-            return new org.springframework.security.core.userdetails.User(u.getLogin(),new BCryptPasswordEncoder().encode(u.getSenha()),grantedAuthority);
+            return new org.springframework.security.core.userdetails.User(u.getLogin(),u.getSenha(),grantedAuthority);
         }catch (SQLException | ClassNotFoundException | UsernameNotFoundException e){
             System.out.println("login erro :"+e.getMessage());
             throw new UsernameNotFoundException(e.getMessage());

@@ -13,12 +13,10 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @SpringBootApplication
 public class ProjectApplication {
 
-    public static void main(String[] args) {
-        BCryptPasswordEncoder b = new BCryptPasswordEncoder();
-        String s = b.encode("1234");
-        System.out.println(b.matches("1234",s));
-        System.out.println(s);
-        //SpringApplication.run(ProjectApplication.class, args);
+    public static void main(String[] args) throws SQLException, ClassNotFoundException {
+        //UsuarioDAO.cadastrar("fefe","sexo");
+        //System.out.println(new BCryptPasswordEncoder().encode("123"));
+        SpringApplication.run(ProjectApplication.class, args);
 
     }
 
