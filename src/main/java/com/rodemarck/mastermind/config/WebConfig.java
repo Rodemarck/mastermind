@@ -38,8 +38,6 @@ public class WebConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     AuthenticationSuccessHandler authenticationSuccessHandler;
 
-    @Autowired
-    Err err;
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -51,16 +49,18 @@ public class WebConfig extends WebSecurityConfigurerAdapter {
 
         http
             .authorizeRequests()
+                .antMatchers("/cadastro","/cadastrar")
+                    .permitAll()
                 .antMatchers(ARTEFATOS)
                     .permitAll()
-                .anyRequest()
+                .antMatchers("/","/jogoCriado")
                     .authenticated()
             .and()
             .formLogin()
                 .loginPage("/logar")
                     .permitAll()
                         .successHandler(authenticationSuccessHandler)
-                        .failureHandler(err)
+                        .successForwardUrl("/")
             .and()
             .logout()
                 .logoutUrl("/deslogar")

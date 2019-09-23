@@ -9,7 +9,6 @@ import java.time.LocalDateTime;
 public class Jogo implements Serializable{
     private Usuario criador;
     private LocalDateTime dataCricao;
-    private String nome;
     private int[] resposta;
     private int id;
     private static int IDENTIFICATOR = 1;
@@ -18,11 +17,10 @@ public class Jogo implements Serializable{
     public Jogo(ResultSet rs){
 
     }
-    public Jogo(Usuario criador, LocalDateTime dataCricao, String nome,int id, int ... resposta) {
+    public Jogo(Usuario criador, LocalDateTime dataCricao,  int ... resposta) {
         this.id = id;
         this.criador = criador;
         this.dataCricao = dataCricao;
-        this.nome = nome;
         this.resposta = resposta;
         this.respostaString = "";
         for(int i=0;i<4;i++)
@@ -50,13 +48,7 @@ public class Jogo implements Serializable{
         this.dataCricao = dataCricao;
     }
 
-    public String getNome() {
-        return nome;
-    }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
 
     public int[] getResposta() {
         return resposta;

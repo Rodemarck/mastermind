@@ -18,7 +18,12 @@
             </thead>
             <tbody>
             <button id="nJogo">Criar novo jogo</button>
-            <div></div>
+            <div class="linhas">
+                <div class="classe white" id="01"></div>
+                <div class="classe white" id="02"></div>
+                <div class="classe white" id="03"></div>
+                <div class="classe white" id="04"></div>
+            </div>
 
 
                 <tr th:each="jogo,jogoIndex : ${jogos}" th:attr="data-url=${jogo.id}">

@@ -43,12 +43,11 @@ public class JogoDAO {
         try {
             con = DatabaseConnection.getInstance().getConnection();
             stmt = con.prepareStatement(
-                    "INSERT INTO jogo (id_criador,dataCriacao,nome,respostas) VALUES (?,?,?,?)"
+                    "INSERT INTO jogo (id_criador,dataCriacao,respostas) VALUES (?,?,?)"
             );
             stmt.setInt(1, jogo.getCriador().getId());
             stmt.setString(2, jogo.getDataCricao().toString());
-            stmt.setString(3, jogo.getNome());
-            stmt.setString(4, jogo.getRespostaString());
+            stmt.setString(3, jogo.getRespostaString());
             stmt.executeUpdate();
         } catch (SQLException | ClassNotFoundException e) {
             throw e;

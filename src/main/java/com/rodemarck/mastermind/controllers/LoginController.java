@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpSession;
+
 /**
  *
  * @author RODEMARCK.MELOJ
@@ -17,8 +19,9 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 public class LoginController {
     @RequestMapping("/logar")
-    public ModelAndView logar(){
-        ModelAndView mv = new ModelAndView("logar");
-        return mv;
+    public ModelAndView logar(HttpSession session){
+        if(session.getAttribute("conta") != null)
+            return new ModelAndView("/jogosCriados");
+        return  new ModelAndView("logar");
     }
 }
