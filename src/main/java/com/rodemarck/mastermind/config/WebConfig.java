@@ -53,14 +53,13 @@ public class WebConfig extends WebSecurityConfigurerAdapter {
                     .permitAll()
                 .antMatchers(ARTEFATOS)
                     .permitAll()
-                .antMatchers("/","/jogoCriado")
+                .antMatchers("/","/salao","/criarJogo")
                     .authenticated()
             .and()
             .formLogin()
                 .loginPage("/logar")
                     .permitAll()
                         .successHandler(authenticationSuccessHandler)
-                        .successForwardUrl("/")
             .and()
             .logout()
                 .logoutUrl("/deslogar")
@@ -71,9 +70,9 @@ public class WebConfig extends WebSecurityConfigurerAdapter {
             .and()
             .sessionManagement()
                 .invalidSessionUrl("/logar")
-
-                    /*.csrf()
-                        .disable()*/;
+            .and()
+                .csrf()
+                    .disable();
     }
 }
 

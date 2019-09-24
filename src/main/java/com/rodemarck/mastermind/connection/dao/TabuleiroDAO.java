@@ -25,6 +25,8 @@ public class TabuleiroDAO {
             stmt.setInt(3, t.getIndex());
             stmt.setInt(4, t.getJogo().getId());
             stmt.setInt(5, t.getUsuario().getId());
+
+            stmt.executeUpdate();
         } catch (SQLException | ClassNotFoundException e) {
             throw e;
         } finally {
@@ -170,9 +172,9 @@ public class TabuleiroDAO {
             rs = stmt.executeQuery();
             if (rs.next())
                 t = new Tabuleiro(rs);
-            if(t == null || t.valida()){
-                TabuleiroDAO.cadastrar(new Tabuleiro(usuario,JogoDAO.getById(id_jogo)));
-                return tabuleiroDoJogo(usuario, id_jogo);
+            else{
+                t = new Tabuleiro(usuario, JogoDAO.getById(id_jogo));
+                cadastrar(t);
             }
 
         } catch (SQLException | ClassNotFoundException e) {

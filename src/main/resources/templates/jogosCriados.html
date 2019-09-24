@@ -29,7 +29,6 @@
                 <tr th:each="jogo,jogoIndex : ${jogos}" th:attr="data-url=${jogo.id}">
                         <td><span th:text="${jogo.criador.login}"></span></td>
                         <td><span th:text="${jogo.dataCricao}"></span></td>
-                        <td><span th:text="${jogo.nome}"></span></td>
                 </tr>
             </tbody>
         </table>

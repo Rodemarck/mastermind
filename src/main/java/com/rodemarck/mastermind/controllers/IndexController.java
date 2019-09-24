@@ -33,7 +33,7 @@ public class IndexController {
     @RequestMapping("/")
     public ModelAndView index(HttpSession session, String id) throws SQLException, ClassNotFoundException {
         if(id == null){
-            return new ModelAndView("redirect:/jogosCriados");
+            return new ModelAndView("redirect:/salao");
         }
         Jogo tab = null;
         int jId = Integer.parseInt(id);
@@ -43,7 +43,7 @@ public class IndexController {
                 break;
             }
         if(tab == null)
-            return new ModelAndView("redirect:/jogosCriados");
+            return new ModelAndView("redirect:/salao");
         System.out.println((Usuario) session.getAttribute("conta"));
         Tabuleiro t = TabuleiroDAO.tabuleiroDoJogo((Usuario) session.getAttribute("conta"),jId);
         ModelAndView mv = new ModelAndView("index");

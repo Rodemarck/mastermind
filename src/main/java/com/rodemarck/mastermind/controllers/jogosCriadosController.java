@@ -16,10 +16,10 @@ import java.util.ArrayList;
 
 @RestController
 public class jogosCriadosController {
-    @RequestMapping("/jogosCriados")
+    @RequestMapping("/salao")
     public ModelAndView jogos(HttpSession session){
         System.out.println(session.getAttribute("conta"));
-        ArrayList<Jogo> jogos = null;
+        ArrayList<Jogo> jogos = new ArrayList<>();
         try{
             jogos = JogoDAO.listar();
         } catch (SQLException e) {
@@ -28,18 +28,25 @@ public class jogosCriadosController {
             e.printStackTrace();
         }
         ModelAndView mv = new ModelAndView("jogosCriados");
+        jogos.forEach(jogo -> System.out.println(">>"+jogo));
         mv.addObject("jogos", jogos);
         return mv;
     }
 
     @RequestMapping("/criarJogo")
     public ResponseEntity<String> criarJogo(HttpSession session, int c1, int c2, int c3, int c4){
+        System.out.println("criando um jogo, em tes");
         int[] respostas = new int[]{c1,c2,c3,c4};
+        System.out.println(session.getAttribute("conta"));
         try {
-            JogoDAO.cadastrar(new Jogo(((Usuario)session.getAttribute("conta")),LocalDateTime.now(),respostas));
+            Jogo j = new Jogo(((Usuario)session.getAttribute("conta")),LocalDateTime.now(),respostas);
+            System.out.println(j);
+            JogoDAO.cadastrar(j);
+
+            return new ResponseEntity<>(""+JogoDAO.getUlitmoByCriador(((Usuario)session.getAttribute("conta")).getId()).getId(),HttpStatus.ACCEPTED);
         } catch (SQLException | ClassNotFoundException e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
         }
-        return new ResponseEntity<>("foi porra",HttpStatus.ACCEPTED);
+
     }
 }

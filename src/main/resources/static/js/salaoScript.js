@@ -21,10 +21,10 @@ $(function (){
                 c3:cores[2],
                 c4:cores[3]
             };
-            $.post("/criarJogo",dados).done(function () {
-                alert("foi")
-            }).fail(function () {
-                alert("sexo");
+            $.post("/criarJogo",dados).done(function (xhr, status, error) {
+                alert("jogo criado, sala:" + window.location.host + "/?id=" + xhr.responseText);
+            }).fail(function (xhr, status, error) {
+                alert(xhr.responseText);
             })
         }
     })

@@ -1,8 +1,11 @@
 package com.rodemarck.mastermind.model.beans;
 
+import com.rodemarck.mastermind.connection.dao.JogoDAO;
+import com.rodemarck.mastermind.connection.dao.UsuarioDAO;
 import com.rodemarck.mastermind.model.user.Usuario;
 import java.io.Serializable;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,10 +16,9 @@ public class Tabuleiro implements Serializable{
     private int[][] matriz;
     private int[][] pedra;
     private Usuario usuario;
-    private LocalDateTime ultimoJogada;
     private int index;
     private Jogo jogo;
-    
+
 
     public Tabuleiro(Usuario u, Jogo jogo) {
         this.usuario = u;
@@ -31,8 +33,25 @@ public class Tabuleiro implements Serializable{
             }
     }
 
-    public Tabuleiro(ResultSet rs) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Tabuleiro(ResultSet rs) throws SQLException, ClassNotFoundException {
+        this.usuario = UsuarioDAO.getById(rs.getInt("tabuleiro.id_jogador"));
+        this.jogo = JogoDAO.getById(rs.getInt("tabuleiro.id_jogo"));
+        this.id = rs.getInt("tabuleiro.id");
+        this.index = rs.getInt("tabuleiro.indice");
+        String mstr = rs.getString("tabuleiro.matriz");
+        String pstr = rs.getString("tabuleiro.pedras");
+
+        this.matriz = new int[10][4];
+        this.pedra = new int[10][4];
+
+
+        int i = 0;
+        for(int y=0; y<10;y++)
+            for(int x=0;x<4;x++){
+                this.matriz[y][x] = Integer.parseInt(""+mstr.charAt(i));
+                this.pedra[y][x] = Integer.parseInt(""+pstr.charAt(i));
+                i++;
+            }
     }
 
     public void setarMatriz(int ... vector){
@@ -101,14 +120,6 @@ public class Tabuleiro implements Serializable{
         this.usuario = usuario;
     }
 
-    public LocalDateTime getUltimoJogada() {
-        return ultimoJogada;
-    }
-
-    public void setUltimoJogada(LocalDateTime ultimoJogada) {
-        this.ultimoJogada = ultimoJogada;
-    }
-
     public void verifica(int index) {
         int pretas = 0;
         int brancas = 0;
@@ -170,7 +181,7 @@ public class Tabuleiro implements Serializable{
         StringBuilder s= new StringBuilder();
         for(int[] y:matriz)
             for(int x:y)
-                s.append(s);
+                s.append(x);
         return s.toString();
     }
 
@@ -178,7 +189,7 @@ public class Tabuleiro implements Serializable{
         StringBuilder s= new StringBuilder();
         for(int[] y:pedra)
             for(int x:y)
-                s.append(s);
+                s.append(x);
         return s.toString();
     }
 }

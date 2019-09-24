@@ -21,8 +21,8 @@ public class JogoDAO {
         try {
             con = DatabaseConnection.getInstance().getConnection();
             stmt = con.prepareStatement(
-                    "SELECT * FROM usuarios "
-                    + "WHERE usuarios.id=?"
+                    "SELECT * FROM jogo "
+                    + "WHERE jogo.id=?"
             );
             stmt.setInt(1, id);
             rs = stmt.executeQuery();
@@ -93,5 +93,30 @@ public class JogoDAO {
             DatabaseConnection.getInstance().close(con, rs, stmt);
         }
         return list;
+    }
+
+    public static Jogo getUlitmoByCriador(int id_criador) throws SQLException, ClassNotFoundException {
+        Connection con = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        Jogo j = null;
+        try {
+            con = DatabaseConnection.getInstance().getConnection();
+            stmt = con.prepareStatement(
+                    "SELECT * FROM jogo "
+                            + "WHERE jogo.id_criador=? " +
+                            "ORDER BY jogo.id DESC LIMIT 1"
+            );
+            stmt.setInt(1, id_criador);
+            rs = stmt.executeQuery();
+            if (rs.next()) {
+                j = new Jogo(rs);
+            }
+        } catch (SQLException | ClassNotFoundException e) {
+            throw e;
+        } finally {
+            DatabaseConnection.getInstance().close(con, rs, stmt);
+        }
+        return j;
     }
 }

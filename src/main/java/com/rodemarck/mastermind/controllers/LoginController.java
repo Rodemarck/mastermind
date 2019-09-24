@@ -21,7 +21,7 @@ public class LoginController {
     @RequestMapping("/logar")
     public ModelAndView logar(HttpSession session){
         if(session.getAttribute("conta") != null)
-            return new ModelAndView("/jogosCriados");
+            return new ModelAndView("/salao");
         return  new ModelAndView("logar");
     }
 }
