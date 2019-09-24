@@ -27,7 +27,7 @@ public class Jogo implements Serializable{
         this.criador = UsuarioDAO.getById(rs.getInt("jogo.id_criador"));
     }
     public Jogo(Usuario criador, LocalDateTime dataCricao,  int ... resposta) {
-        this.id = id;
+        this.id = 0;
         this.criador = criador;
         this.dataCricao = dataCricao;
         this.resposta = resposta;

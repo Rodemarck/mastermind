@@ -18,7 +18,6 @@ import java.util.ArrayList;
 public class jogosCriadosController {
     @RequestMapping("/salao")
     public ModelAndView jogos(HttpSession session){
-        System.out.println(session.getAttribute("conta"));
         ArrayList<Jogo> jogos = new ArrayList<>();
         try{
             jogos = JogoDAO.listar();
@@ -35,12 +34,9 @@ public class jogosCriadosController {
 
     @RequestMapping("/criarJogo")
     public ResponseEntity<String> criarJogo(HttpSession session, int c1, int c2, int c3, int c4){
-        System.out.println("criando um jogo, em tes");
         int[] respostas = new int[]{c1,c2,c3,c4};
-        System.out.println(session.getAttribute("conta"));
         try {
             Jogo j = new Jogo(((Usuario)session.getAttribute("conta")),LocalDateTime.now(),respostas);
-            System.out.println(j);
             JogoDAO.cadastrar(j);
 
             return new ResponseEntity<>(""+JogoDAO.getUlitmoByCriador(((Usuario)session.getAttribute("conta")).getId()).getId(),HttpStatus.ACCEPTED);

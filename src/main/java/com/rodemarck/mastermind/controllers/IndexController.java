@@ -44,9 +44,10 @@ public class IndexController {
             }
         if(tab == null)
             return new ModelAndView("redirect:/salao");
-        System.out.println((Usuario) session.getAttribute("conta"));
         Tabuleiro t = TabuleiroDAO.tabuleiroDoJogo((Usuario) session.getAttribute("conta"),jId);
         ModelAndView mv = new ModelAndView("index");
+        System.out.println("aaaaaahhh <"+t+">");
+
         mv.addObject("tabuleiro",t);
         return mv;
     }
@@ -54,13 +55,9 @@ public class IndexController {
     @RequestMapping(value="/fazEscolha", method = RequestMethod.GET)
     public ResponseEntity<String> fazEscolha(HttpSession session, int id, int index, int e1, int e2, int e3, int e4) {
         int[] escolhas = new int[]{ e1,e2,e3,e4};
-        System.out.println("id>>"+id);
-        System.out.println("index>>"+index);
-        System.out.print("vector>>"+Arrays.toString(escolhas));
-        System.out.println();
         index --;
         try{
-            Tabuleiro t = TabuleiroDAO.tabuleiroDoJogo((Usuario) session.getAttribute("conta"),id);
+            Tabuleiro t = TabuleiroDAO.getById(id);
             if(t.valida()){
                 return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             }if(t.getIndex()<=0){

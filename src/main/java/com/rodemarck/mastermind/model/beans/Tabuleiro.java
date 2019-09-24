@@ -192,4 +192,16 @@ public class Tabuleiro implements Serializable{
                 s.append(x);
         return s.toString();
     }
+
+    @Override
+    public String toString() {
+        return "Tabuleiro{" +
+                "id=" + id +
+                ", matriz=" + Arrays.toString(matriz) +
+                ", pedra=" + Arrays.toString(pedra) +
+                ", usuario=" + usuario +
+                ", index=" + index +
+                ", jogo=" + jogo +
+                '}';
+    }
 }

@@ -21,7 +21,6 @@ public class CadastroController {
 
     @RequestMapping(value = "/cadastrar")
     public ResponseEntity<String> cadastrar(String login, String password) {
-        System.out.println("devia cadastar");
         try {
             UsuarioDAO.cadastrar(login, password);
         } catch (ClassNotFoundException | SQLException e) {
@@ -30,8 +29,4 @@ public class CadastroController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/transa")
-    public void a(){
-        System.out.println("fiz sexo");
-    }
 }
